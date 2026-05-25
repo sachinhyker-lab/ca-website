@@ -30,6 +30,20 @@ $extraHead = <<<'HTML'
     .btn-outline-w i{color:#111827 !important;opacity:1 !important;}
     .btn-outline-w:hover{background:#F3F4F6 !important;color:#111827 !important;border-color:#111827 !important;}
 
+    /* ===== HERO Phone CTA: force tel link text to pure black ===== */
+    a.btn-outline-w[href^="tel:"]{
+      color:#000000 !important;
+      font-weight:700 !important;
+    }
+    a.btn-outline-w[href^="tel:"] i{
+      color:#000000 !important;
+      opacity:1 !important;
+    }
+    a.btn-outline-w[href^="tel:"] *{
+      color:#000000 !important;
+      font-weight:700 !important;
+    }
+
     /* ===== Hero Wave Slider (identical to previous pages) ===== */
     .hero-slider-wrap{width:100vw;position:relative;left:50%;margin-left:-50vw;overflow:hidden;margin-top:0!important;padding-top:0!important;}
     .hero-slide{display:none;position:relative;height:auto;min-height:400px;padding:110px 0 50px;overflow:hidden;}

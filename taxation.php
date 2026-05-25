@@ -125,6 +125,16 @@ $extraHead = <<<'HTML'
     .footer a:hover{color:var(--gold);}
     .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding:18px 0;margin-top:40px;font-size:0.9rem;text-align:center;}
 
+    /* ===== HERO Phone CTA (Taxation page): ensure tel button text is readable ===== */
+    a.btn-outline-w[href^="tel:"]{
+      color:#000000 !important;
+      font-weight:700 !important;
+    }
+    a.btn-outline-w[href^="tel:"] i{
+      color:#000000 !important;
+      opacity:1 !important;
+    }
+
     @media(max-width:991px){
       .tax-grid{grid-template-columns:1fr;}
       .hero-slide-inner{flex-wrap:wrap;padding:0 24px;}

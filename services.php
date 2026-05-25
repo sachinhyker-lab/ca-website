@@ -220,6 +220,16 @@ $extraHead = <<<'HTML'
     .wa-float a{width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:all .3s;text-decoration:none;}
     .wa-float a:hover{transform:scale(1.12);}
 
+    /* ===== HERO Phone CTA: make tel text clearly readable on white/outlined button ===== */
+    a.btn-outline-w[href^="tel:"]{
+      color:#000000 !important;
+      font-weight:700 !important;
+    }
+    a.btn-outline-w[href^="tel:"] i{
+      color:#000000 !important;
+      opacity:1 !important;
+    }
+
     @media(max-width:1100px){.svc-panel-wrap{grid-template-columns:1fr;}.svc-panel-right{display:grid;grid-template-columns:1fr 1fr;gap:20px;}}
     @media(max-width:991px){
       .hero-slide-inner{flex-wrap:wrap;padding:0 24px;}.hero-slide-left,.hero-slide-right{flex:0 0 100%;max-width:100%;}.hero-slide-right{display:none;}
