@@ -1,0 +1,10 @@
+@media (max-width: 992px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .section-title { font-size: 2.2rem; }
+}
+@media (max-width: 576px) {
+  body { padding-top: 70px; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content .lead { font-size: 1rem; }
+  .service-card { margin-bottom: 20px; }
+}
