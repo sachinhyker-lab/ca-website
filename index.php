@@ -1286,10 +1286,6 @@ include __DIR__ . '/includes/navbar.php';
                         Premium guidance for <span class="hero-title-em">business</span> &amp; <span class="hero-title-em">individuals</span>.
                     </h1>
 
-                    <p class="hero-sub" data-aos="fade-up" data-aos-delay="300">
-                        GST &amp; Income Tax compliance, ROC &amp; statutory filings, audit &amp; assurance, and advisory—delivered with professional ethics, accuracy, and confidentiality.
-                    </p>
-
                     <div class="hero-cta-row" data-aos="fade-up" data-aos-delay="400">
                         <a href="contact.php" class="btn-gold btn-hero">
                             <i class="bi bi-calendar-check-fill"></i>
@@ -1359,40 +1355,6 @@ include __DIR__ . '/includes/navbar.php';
     </div>
 </section>
 
-
-<!-- ================================================
-     STATS STRIP
-================================================= -->
-<div class="stats-strip">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-6 col-md-3">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-num"><span class="counter" data-target="500">0</span>+</div>
-                    <div class="stat-label">Clients Served</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-num"><span class="counter" data-target="10">0</span>+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-num"><span class="counter" data-target="15">0</span>+</div>
-                    <div class="stat-label">Services Offered</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-num"><span class="counter" data-target="98">0</span>%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- ================================================
      ABOUT SECTION

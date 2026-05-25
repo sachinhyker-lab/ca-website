@@ -27,8 +27,15 @@ $extraHead = <<<'HTML'
     .btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#fff;padding:12px 26px;border-radius:6px;font-weight:700;font-size:.91rem;text-decoration:none;border:none;cursor:pointer;transition:all .3s;}
     .btn-gold:hover{background:var(--gold-dark);color:#fff;transform:translateY(-2px);}
     .btn-outline-w{display:inline-flex;align-items:center;gap:8px;background:#FFFFFF !important;color:#111827 !important;padding:11px 24px;border-radius:6px;font-weight:700;font-size:.91rem;text-decoration:none;border:2px solid #111827 !important;cursor:pointer;transition:all .3s;opacity:1 !important;}
-    .btn-outline-w i{color:#111827 !important;opacity:1 !important;}
-    .btn-outline-w:hover{background:#F3F4F6 !important;color:#111827 !important;border-color:#111827 !important;}
+    .btn-outline-w{color:#000000 !important;}
+    .btn-outline-w i{color:#000000 !important;opacity:1 !important;}
+    .btn-outline-w:hover{background:#F3F4F6 !important;color:#000000 !important;border-color:#111827 !important;}
+
+    /* ===== Final CTA (Taxation) text visibility ===== */
+    div[style*="background:var(--black)"] h2,
+    div[style*="background:var(--black)"] p{
+      color:#FFFFFF !important;
+    }
 
     /* ---------- Hero Wave Slider (same) ---------- */
     .hero-slider-wrap{width:100vw;position:relative;left:50%;margin-left:-50vw;overflow:hidden;margin-top:0!important;padding-top:0!important;}
@@ -137,7 +144,7 @@ include __DIR__ . '/includes/header.php';
 include __DIR__ . '/includes/navbar.php';
 ?>
 <!-- Hero Slider (Taxation Focus) -->
-  <div class="hero-slider-wrap" style="margin-top:76px!important;">
+    <div class="hero-slider-wrap">
     <div class="hero-slide active" style="background:#134E3A;">
       <div class="hero-slide-inner">
         <div class="hero-slide-left">

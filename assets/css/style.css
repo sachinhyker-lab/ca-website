@@ -50,7 +50,8 @@ body {
   background: var(--off);
   color: var(--black);
   overflow-x: hidden;
-  padding-top: 0; /* navbar ab fixed nahi, but hum adjust karenge */
+  /* Fixed-top navbar offset (prevents header/section mismatch on some pages, including Contact) */
+  padding-top: 76px;
 }
 
 /* ===== Breakout utility (full width) ===== */
@@ -157,25 +158,46 @@ h1, h2, h3, h4, h5, h6 {
 .cta-link.gold:hover { background: var(--gold2); color: #fff; }
 
 /* ===== Navbar (dark style) ===== */
-.navbar {
+/* Navbar / Header consistency across all pages */
+.navbar,
+.premium-navbar {
   background: var(--black) !important;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border) !important;
   padding: 0.6rem 0;
-  z-index: 1000;
+  z-index: 1000 !important;
 }
+
 .navbar-brand img { height: 42px; }
 .navbar-nav .nav-link {
   color: rgba(255,255,255,0.75) !important;
   font-weight: 500;
   margin: 0 10px;
   transition: 0.2s;
+  opacity: 1 !important;
 }
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--gold) !important;
 }
-.navbar-toggler { border-color: rgba(255,255,255,0.2); }
+
+.navbar-toggler { border-color: rgba(255,255,255,0.2) !important; }
 .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+/* Ensure dropdown/menu is always visible (e.g., Contact page inconsistencies) */
+.dropdown-menu {
+  background: var(--black) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  z-index: 2000 !important;
+}
+.dropdown-item {
+  color: rgba(255,255,255,0.85) !important;
+  opacity: 1 !important;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(201,169,110,0.12) !important;
+  color: #FFFFFF !important;
+}
 
 /* ===== Hero Section ===== */
 .hero {
@@ -277,10 +299,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-sub {
   font-size: clamp(0.88rem, 1.4vw, 1rem);
-  line-height: 1.85;
+  line-height: 1.75;
   color: rgba(255,255,255,0.92);
   max-width: 580px;
-  margin: 0 auto 40px;
+  margin: 0 auto 18px; /* reduce gap: description sits closer to CTA */
   font-weight: 400;
 }
 .hero-btns {
@@ -288,6 +310,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 .scroll-hint {
   position: absolute;
@@ -358,6 +381,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-top: 6px;
   display: block;
+}
 .stat-accent {
   width: 24px;
   height: 1px;
@@ -582,6 +606,8 @@ h1, h2, h3, h4, h5, h6 {
   .svc-grid { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: 1fr; }
   .trust-cell { border-right: none; border-bottom: 1px solid var(--border); }
+  /* Keep mobile navigation visible */
+  .navbar-collapse { z-index: 2100 !important; }
 }
 @media (max-width: 500px) {
   .svc-grid { grid-template-columns: 1fr; }
